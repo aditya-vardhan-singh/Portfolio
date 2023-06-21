@@ -1,0 +1,133 @@
+/* Collective */
+body {
+    background-color: antiquewhite;
+    color: black;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 700;
+}
+.container {
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+a {
+    color: purple;
+}
+
+/* Hero */
+#hero h1 {
+    font-size: 5.5rem;
+}
+#hero h3 {
+    font-size: 2.5rem;
+    color: rgb(89, 96, 103);
+    font-family: monospace;
+}
+#hero button {
+    border-radius: 0%;
+    width: 15rem;
+}
+
+/* About-Me */
+#about-me h1 {
+    font-size: 4.5rem;
+}
+
+/* Education, Skills */
+#education h1, #skills h1 {
+    font-size: 3rem;
+}
+#education h3, #skills h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+#education p, #skills p {
+    font-size: 1rem;
+}
+#skills h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Connect */
+#connect .logo a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Phone width */
+@media (max-width: 580px) {
+    /* Hero */
+    #hero h1 {
+        font-size: 4.5rem;
+    }
+    #hero h3 {
+        font-size: 1.5rem;
+    }
+
+    /* About Me */
+    #about-me h1 {
+        font-size: 3.5rem;
+    }
+    #about-me img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    /* Education */
+    #education h1, #skills h1 {
+        font-size: 2.5rem;
+    }
+    #education h3, #skills h3, #skills h4 {
+        font-size: 1rem;
+    }
+    #education p, #skills p {
+        font-size: 0.9rem;
+    }
+
+    #connect {
+        justify-content: center;
+    }
+}
+
+/* Animations */
+.gradient-background {
+    background: linear-gradient(300deg, #526D82, #9DB2BF, #DDE6ED);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.fadeIn {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0); /* ADDED - start x position as -50px */
+    cursor: default;
+    transition: 0.75s opacity ease-in-out; /* CHANGED - transition only opacity */
+}
+.fadeInScroll {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0); /* ADDED - start x position as -50px */
+    cursor: default;
+    transition: 0.75s opacity ease-in-out; /* CHANGED - transition only opacity */
+}
+.visible {
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0); /* ADDED - move x to 0 for the selected item */
+}
+.shiny-heading {
+    color: black;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 80px white, 0 0 90px white, 0 0 100px white;
+  }
